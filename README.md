@@ -16,7 +16,7 @@ This paper constructs a Cramer-von Mises type test based on a martingale-transfo
 
 ## Overview of R Scripts and Correspondence to Manuscript Tables
 
-| Script Name | Description | Corresponding Table/Section |
+| Script Name | Description | Corresponding Table/Figure |
 | :--- | :--- | :--- |
 | `Pcvm_Pls_hybrid_linear.R` | Main simulation study for high-dimensional **linear regression** models ($H_{11}, H_{12}, H_{13}$). | [Table 1, Table S1, Table S2] |
 | `Pcvm_Pls_hybrid_logit.R` | Main simulation study for high-dimensional **logistic regression** models ($H_{21}, H_{22}$). | [Table 2, Table S3] |
