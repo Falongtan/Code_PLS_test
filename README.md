@@ -1,4 +1,4 @@
-#Code_PLS_test
+# Code_PLS_test
 
 ## Overview 
 [A Two-Step Projection-Based Goodness-of-Fit Test for Ultra-High Dimensional Sparse Regressions]( https://arxiv.org/abs/2412.10721).
