@@ -7,7 +7,7 @@ This repository contains the R source code to reproduce the Monte Carlo simulati
 | Script Name | Description | Corresponding Table/Figure | Runtime |
 | :--- | :--- | :--- | :--- |
 | `code of all results of linear regression.R` | Main simulation study for high-dimensional **linear regression** models using the Fisher combination/minimum p-value approach. | Table 1, Tables S1-S31 | 516 h |
-| `code of all results of logistic regression.R` | Main simulation study for high-dimensional **logistic regression** models using the Fisher combination/minimum p-value approach. | Table 2, Tables 32-38 | 334h |
+| `code of all results of logistic regression.R` | Main simulation study for high-dimensional **logistic regression** models using the Fisher combination/minimum p-value approach. | Table 2, Tables S32-S38 | 334h |
 | `realdata_linear_data_test.R` | Real data applications on the linear regression models (e.g., Communities and Crime dataset (CommViolPredUnnormalizedData.xlsx)). | Figure 1 | 2.88min |
 | `realdata_logistic_data_test.R` | Real data applications on the logistic regression models (e.g., musks dataset (clean1.csv)). | - | 3.2min |
 | `renv.lock` | R package dependency lock file used to ensure the reproducibility of the computational environment. | - | - |
