@@ -551,7 +551,7 @@ c_h <-  c(1)      #bandwidths
 pho <- c(0,.4,.8)           #correlation
 estimate_type <- c(1,2,3)  #1:lasso; 2:scad; 3:mcp
 error_type <- c(1,2)  #1:normal error 2:t error
-rpgrp_run <- TRUE          ###don't run rp and grp
+rpgrp_run <- c(TRUE,FALSE,FALSE)          ###don't run rp and grp
 estimate_num=2    ####post-lasso or post-scad or post-mcp
 df=3   #error_type:1, the size of df doesn't matter; error_type:2, df=3 represents t-distribution with 3 degree of freedom
 
@@ -573,7 +573,7 @@ for (ee in 1:length(error_type)){
                       (kk-1)*length(a)*length(p)*length(c_h) +
                       (ii-1)*length(p)*length(c_h) +
                       (jj-1)*length(c_h) + cc    # unique seed per parameter combination
-              result_pls <- PLS_lm_parallel_1(p[jj], n, a[ii],example[ll],c_h[cc],pho[kk],rpgrp_switch = rpgrp_run,
+              result_pls <- PLS_lm_parallel_1(p[jj], n, a[ii],example[ll],c_h[cc],pho[kk],rpgrp_switch = rpgrp_run[nn],
                                               estimate_type=estimate_type[nn],estimate_num=estimate_num,error_type=error_type[ee],df=df,seed=seed)
               ##index
               base_index <- r * ((ee-1)*length(estimate_type)*length(example)*length(pho)*length(a)*length(c_h)+
