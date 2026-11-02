@@ -44,7 +44,7 @@ if(len_beta1_non0 == 0){
   y1_x1_sec <- as.data.frame(cbind(y1,x1_sec))
   colnames(y1_x1_sec) <- c("y1",colnames(x1_sec))
   sec_model1 <- glm(y1~.,data=y1_x1_sec, family = binomial(link = "logit"))
-  pred1 = predict(sec_model1, newx = x2_sec, type="response")
+  pred1 = predict(sec_model1, newx = x1_sec, type="response")
   pred1 = matrix(unname(pred1), ncol = 1) 
   U1 <- y1 - pred1                                                           # residuals based on x1 y1
 }
