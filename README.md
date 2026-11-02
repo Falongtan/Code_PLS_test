@@ -1,17 +1,22 @@
-# Code_PLS_test
+##Code_PLS_test
 
 ## Overview 
 [A Two-Step Projection-Based Goodness-of-Fit Test for Ultra-High Dimensional Sparse Regressions]( https://arxiv.org/abs/2412.10721).
 This repository contains the R source code to reproduce the Monte Carlo simulations and real data analyses presented in the manuscript and its Supplementary Material. This paper proposes a two-step strategy that first constructs multiple test statistics based on projected predictors from distinct projections to mitigate the Curse of Dimensionality problem. The second step employs p-value combination methods (e.g., the minimum p-value and the Fisher combination) to form the final test statistics. This projection-based approach significantly mitigates the dimensionality problem, enabling the tests to detect local alternatives converging to the null at the rate as if the predictor were univariate.
-
 ## Overview of R Scripts and Correspondence to Manuscript Tables
-| Script Name | Description | Corresponding Table/Figure |
-| :--- | :--- | :--- |
-| `simulation_PLS_linear_fisher_min.R` | Main simulation study for high-dimensional **linear regression** models using the Fisher combination/minimum p-value approach. | [ ] |
-| `simulation_PLS_logit_fisher_min.R` | Main simulation study for high-dimensional **logistic regression** models using the Fisher combination/minimum p-value approach. | [ ] |
-| `realdata_linear_data_test.R` | Real data applications on the linear regression models (e.g., Communities and Crime dataset(communities.csv)). | [ ] |
-| `realdata_logistic_data_test.R` | Real data applications on the logistic regression models (e.g., OHSU AML dataset). | [ ] |
-| `renv.lock` | R package dependency lock file used to ensure the reproducibility of the computational environment. | - |
+| Script Name | Description | Corresponding Table/Figure | Runtime |
+| :--- | :--- | :--- | :--- |
+| `simulation_PLS_linear_fisher_min.R` | Main simulation study for high-dimensional **linear regression** models using the Fisher combination/minimum p-value approach. | Table 1, Tables S1-S31 | 552 h |
+| `simulation_PLS_logit_fisher_min.R` | Main simulation study for high-dimensional **logistic regression** models using the Fisher combination/minimum p-value approach. | Table 2, Tables 32-38 |  |
+| `realdata_linear_data_test.R` | Real data applications on the linear regression models (e.g., Communities and Crime dataset (CommViolPredUnnormalizedData.xlsx)). | Figure 1 |  |
+| `realdata_logistic_data_test.R` | Real data applications on the logistic regression models (e.g., musks dataset (clean1.csv)). | - |  |
+| `renv.lock` | R package dependency lock file used to ensure the reproducibility of the computational environment. | - |  |
+##  Computational Time and Quick Test Settings
 
+Please note that running the full simulation grids for the main tables can be highly computationally intensive (e.g., the linear regression simulation takes approximately 552 hours). To facilitate easier navigation and faster verification, we provide the following recommendations for a **"quick test"**:
+
+1. **Reduce Monte Carlo Replications**: You can significantly reduce the runtime by setting a smaller number of Monte Carlo replications (e.g., setting `s = 100` or lower in the simulation scripts) to quickly test the pipeline and ensure the computational environment is correctly set up.
+2. **Parallel Computing**: For full-scale simulations, we highly recommend utilizing parallel computing. You can increase the number of CPU cores used (e.g., via the `parallel` or `future` packages in R) to speed up the execution.
+3. **Intermediate Results**: Since the full simulation grid takes a long time to run, the intermediate result CSVs used to generate the tables in the manuscript have been included in the repository.
 
 
