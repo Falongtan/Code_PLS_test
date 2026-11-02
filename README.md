@@ -7,10 +7,10 @@ This repository contains the R source code to reproduce the Monte Carlo simulati
 | Script Name | Description | Corresponding Table/Figure | Runtime |
 | :--- | :--- | :--- | :--- |
 | `simulation_PLS_linear_fisher_min.R` | Main simulation study for high-dimensional **linear regression** models using the Fisher combination/minimum p-value approach. | Table 1, Tables S1-S31 | 552 h |
-| `simulation_PLS_logit_fisher_min.R` | Main simulation study for high-dimensional **logistic regression** models using the Fisher combination/minimum p-value approach. | Table 2, Tables 32-38 |  |
-| `realdata_linear_data_test.R` | Real data applications on the linear regression models (e.g., Communities and Crime dataset (CommViolPredUnnormalizedData.xlsx)). | Figure 1 |  |
-| `realdata_logistic_data_test.R` | Real data applications on the logistic regression models (e.g., musks dataset (clean1.csv)). | - |  |
-| `renv.lock` | R package dependency lock file used to ensure the reproducibility of the computational environment. | - |  |
+| `simulation_PLS_logit_fisher_min.R` | Main simulation study for high-dimensional **logistic regression** models using the Fisher combination/minimum p-value approach. | Table 2, Tables 32-38 | 334 h |
+| `realdata_linear_data_test.R` | Real data applications on the linear regression models (e.g., Communities and Crime dataset (CommViolPredUnnormalizedData.xlsx)). | Figure 1 | 2.88min  |
+| `realdata_logistic_data_test.R` | Real data applications on the logistic regression models (e.g., musks dataset (clean1.csv)). | - | 3.2min |
+| `renv.lock` | R package dependency lock file used to ensure the reproducibility of the computational environment. | - | - |
 ##  Computational Time and Quick Test Settings
 
 Please note that running the full simulation grids for the main tables can be highly computationally intensive (e.g., the linear regression simulation takes approximately 552 hours). To facilitate easier navigation and faster verification, we provide the following recommendations for a **"quick test"**:
