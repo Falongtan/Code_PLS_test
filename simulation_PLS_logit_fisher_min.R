@@ -509,7 +509,7 @@ p<-  c(50,100,300,600, 900,1200)   #dimension
 c_h <-  c(1)                          #bandwidths
 pho <- c(0,0.4,0.8)           #correlation
 estimate_type <- c(1,2,3)
-rpgrp_run <- TRUE           ### run grp
+rpgrp_run <- c(TRUE,FALSE,FALSE)           ### run grp
 estimate_num=2
 
 
@@ -528,7 +528,7 @@ for(nn in 1:length(estimate_type)){
                     (kk-1)*length(a)*length(p)*length(c_h) +
                     (ii-1)*length(p)*length(c_h) +
                     (jj-1)*length(c_h) + cc    # unique seed per parameter combination
-            result_pls <- PLS_logit_parallel_1(p[jj], n, a[ii],c_h[cc],pho[kk],example[ll],rpgrp_switch=rpgrp_run,estimate_type[nn],estimate_num,seed=seed)
+            result_pls <- PLS_logit_parallel_1(p[jj], n, a[ii],c_h[cc],pho[kk],example[ll],rpgrp_switch=rpgrp_run[nn],estimate_type[nn],estimate_num,seed=seed)
             #index
             base_index <- r * ((nn-1)*length(example)*length(pho)*length(a)*length(c_h) + (ll-1)*length(pho)*length(a)*length(c_h) 
                                + (kk-1)*length(a)*length(c_h) + (ii-1)*length(c_h) + (cc-1) ) 
