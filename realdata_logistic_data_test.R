@@ -6,7 +6,7 @@ library(LassoSIR)
 library(VariableScreening)
 library(pROC)
 ####Predict whether the new molecule is a musk or non-musk
-real_data <- read.csv("E:/桌面/local's code/code of simulation and real data/clean1.csv",header=T)
+real_data <- read.csv("clean1.csv",header=T)
 #response variable
 Y <- real_data$Y
 Y <- as.numeric(Y)
