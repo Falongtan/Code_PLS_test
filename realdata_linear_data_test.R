@@ -313,7 +313,7 @@ pval_min1 <-   min(pval_matrix1)<=1-(0.95)^(1/pro2_num)
 pval_min2 <-  min(pval_matrix2)<=1-(0.95)^(1/pro1_num) 
 pval_min_m <- cbind(1 - (1 - min(pval_matrix1))^pro2_num, 1 - (1 - min(pval_matrix2))^pro1_num) 
 pval_min <- 1- pcauchy(mean(tan((0.5-pval_min_m)*pi))) 
-linear_result_lasso <- c(pval_fisher,pval_min)
+linear_result_lasso <- c(pval_fisher = pval_fisher, pval_min = pval_min)
 print(linear_result_lasso)
 
 
@@ -594,7 +594,7 @@ pval_min2 <-  min(pval_matrix2)<=1-(0.95)^(1/pro1_num)
 pval_min_m <- cbind(1 - (1 - min(pval_matrix1))^pro2_num, 1 - (1 - min(pval_matrix2))^pro1_num) 
 pval_min <- 1- pcauchy(mean(tan((0.5-pval_min_m)*pi))) 
 #result
-nonlinear_result_lasso <- c(pval_fisher,pval_min)
+nonlinear_result_lasso <- c(pval_fisher = pval_fisher, pval_min = pval_min)
 print(nonlinear_result_lasso)
 
 
