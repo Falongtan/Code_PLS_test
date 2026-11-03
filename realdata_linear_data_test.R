@@ -50,7 +50,7 @@ library(VariableScreening)
 
 
 ###read data
-linear_data <- read_excel("E:/桌面/local's code/code of simulation and real data/CommViolPredUnnormalizedData.xlsx", sheet = 1, col_names = TRUE)
+linear_data <- read_excel("CommViolPredUnnormalizedData.xlsx", sheet = 1, col_names = TRUE)
 ###drop missing values
 linear_data_nona <- linear_data[which(rowSums(is.na(linear_data))==0),]
 linear_data_final <- matrix(nrow=0,ncol=120)
