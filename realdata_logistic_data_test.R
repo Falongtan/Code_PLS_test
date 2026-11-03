@@ -253,7 +253,7 @@ pval_min2 <-  min(pval_matrix2)<=1-(0.95)^(1/pro1_num)
 pval_min_m <- cbind(1 - (1 - min(pval_matrix1))^pro2_num, 1 - (1 - min(pval_matrix2))^pro1_num) 
 pval_min <- 1- pcauchy(mean(tan((0.5-pval_min_m)*pi))) 
 #result
-logistic_result <- c(pval_fisher,pval_min)
+logistic_result <- c(pval_fisher = pval_fisher, pval_min = pval_min)
 print(logistic_result)
 
 
@@ -359,4 +359,5 @@ suppressMessages({
 ###col1:True Negative Rate   col2:F1    col3:True Positive Rate
 ###col4: Accuracy   col5:ROC
 result_prediction1 = apply(result_prediction,2,mean,na.rm=TRUE)
+names(result_prediction1) <- c("TNR", "F1", "TPR", "ACCURACY", "ROC")
 print(result_prediction1)
