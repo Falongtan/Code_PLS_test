@@ -22,7 +22,7 @@ Please note that the scripts simulation_PLS_linear_fisher_min.R and simulation_P
 
 ## Data Description and Preprocessing
 
-### Communities and Crime
+### Communities and Crime Unnormalized
 
 `CommViolPredUnnormalizedData.xlsx` is a cleaned version of the raw dataset from the [UCI Machine Learning Repository — Communities and Crime Unnormalized](https://archive.ics.uci.edu/dataset/211/communities+and+crime+unnormalized). The first five columns of the raw data cannot be used directly as covariates and were therefore removed. Columns 104–120 (inclusive) contain a large number of missing values; using them directly as covariates would be problematic, so these columns were also removed. (Column indices refer to the original dataset, before any columns were removed.) Accordingly, the only difference between `CommViolPredUnnormalizedData.xlsx` and the raw dataset is that these columns have been deleted. Subsequent data processing steps are documented in [`realdata_linear_data_test.R`](realdata_linear_data_test.R).
 
